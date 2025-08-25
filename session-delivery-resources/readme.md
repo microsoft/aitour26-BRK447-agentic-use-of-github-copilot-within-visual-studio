@@ -23,13 +23,19 @@ The workshop mixes short live demos (30–90s) with recorded segments for longer
 
 ### 🕐 Timing
 
-| Time | Description |
-|---:|---|
-| 0:00 - 5:00 | Intro and overview |
-| 5:00 - 40:00 | Session Steps |
-| 40:00 - 45:00 | Wrap up and Q&A |
+| Time | Description | Content or Demos |
+|---:|---|---|
+| 00 mins |  Introduction | content |
+| 00 mins |  Demo 1 | 02-Zava-Overview, 03-VS2022-and-GHCP-Overview |
+| 00 mins |  GH Copilot Agents | content |
+| 00 mins |  Demo 2 | 04-Add-single-unit-Test-for-AI-Search |
+| 00 mins |  MCP | content |
+| 00 mins |  Demo 3 | 05-add-mcp-servers, (optional) 06-query-mcp-ms-learn, 07-Implement-unit-tests-using-GH-Issue |
+| 00 mins |  Coding Agent | content |
+| 00 mins |  Demo 4 | 08-update-ui-using-agent-based-on-images, 09-coding-agent-implement-payment-PRD |
+| 00 mins |  WrapUp | content |
 
-> Timing table left intentionally as-is per instructions (do not fill beyond this placeholder).
+> Timing table left intentionally as-is per instructions (time cells left empty for manual updates).
 
 ### 🏋️ Preparation
 
