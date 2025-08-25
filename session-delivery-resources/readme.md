@@ -14,7 +14,8 @@ Prior to delivering the workshop please:
 |---|---|---|
 | Workshop Slide Deck | [Presentation](https://aka.ms/) | Presentation slides for this workshop with presenter notes and embedded demo video |
 | Session Delivery Deck | [Deck](https://aka.ms/) | The session delivery slides |
-| More Files | [Some More Files](https://aka.ms/) | More File Descriptions |
+| Demo source code | [demo source code](../src/) | Demo Source Code |
+| Demo source code BackUp | [demo source code backup](../srcBackUp/) | Source Code completed for each one of the demo steps |
 
 ## 🚀 Get Started
 
@@ -25,8 +26,8 @@ The workshop mixes short live demos (30–90s) with recorded segments for longer
 | Time | Description |
 |---:|---|
 | 0:00 - 5:00 | Intro and overview |
-| 5:00 - 70:00 | Session Steps |
-| 70:00 - 75:00 | Wrap up and Q&A |
+| 5:00 - 40:00 | Session Steps |
+| 40:00 - 45:00 | Wrap up and Q&A |
 
 > Timing table left intentionally as-is per instructions (do not fill beyond this placeholder).
 
