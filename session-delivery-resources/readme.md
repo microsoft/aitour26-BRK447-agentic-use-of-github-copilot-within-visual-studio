@@ -37,15 +37,9 @@ These items are required as presenter pre-work and should NOT be listed as sessi
 
 Essential Pre-Setup Requirements:
 
-- Review the Initial Setup guide and recorded setup video: `docs/brk447-01-Initial%20Setup-gen-01/brk447-01-Initial%20Setup-en-US-02-userguide.md` (include the recorded setup video in the same folder as pre-setup material)
+- Review the Initial Setup guide and recorded setup video: [Initial Setup Guide](/session-delivery-resources/01-Initial-Setup/brk447-01-Initial%20Setup-en-US-01-minimal.md)
 - Set up Azure AI services and local development environment
 - Run coding agent actions before the event
-
-Prerequisites for Attendees and Presenter:
-
-- `.NET SDK` (repository targets .NET 9)
-- `Visual Studio 2022`
-- Basic level access to and familiarity with `GitHub Copilot` (sign-in + extension installed)
 
 Optional pre-deploys (presenter choice): pre-deploy AI resources or collect connection strings if you plan to demo live services — otherwise use the recorded video segments described in Engagement Strategies.
 
@@ -55,7 +49,6 @@ All demos reference the userguide files in the `session-delivery-resources/` fol
 
 | Demo | Description |
 |---|---|
-| Introduction & Agenda | Brief session welcome and agenda. |
 | [Architecture / Zava Overview](/session-delivery-resources/02-Zava-Overview/brk447-02-Zava%20Overview-en-US-01-minimal.md) | High-level architecture and key components — keep to the big picture. |
 | [Copilot Features in Visual Studio](/session-delivery-resources/03-VS2022-and-GHCP-Overview/brk447-03-VS2022%20and%20GHCP%20Overview-en-US-01-minimal.md) | Ask vs Agent modes, completions, and quick edits inside Visual Studio. |
 | [AI Search & Unit Testing](/session-delivery-resources/04-Add-single-unit-Test-for-AI-Search/brk447-04%20Add%20single%20unit%20Test%20for%20AI%20Search-en-US-01-minimal.md) | TDD flow with Copilot scaffolding unit tests and validating results. |
