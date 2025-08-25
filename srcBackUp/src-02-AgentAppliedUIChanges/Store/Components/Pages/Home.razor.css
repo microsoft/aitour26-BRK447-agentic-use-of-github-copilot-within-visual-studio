@@ -1,0 +1,16 @@
+/* Zava hero styling for home page to set tone */
+:root { /* rely on global vars but ensure presence in CSS isolation scope */ }
+
+h1 { margin-bottom: 0.5rem; }
+
+.intro {
+    max-width: 60ch;
+    color: var(--bs-secondary-color);
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(11,31,39,0.6), rgba(14,42,53,0.6));
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+}

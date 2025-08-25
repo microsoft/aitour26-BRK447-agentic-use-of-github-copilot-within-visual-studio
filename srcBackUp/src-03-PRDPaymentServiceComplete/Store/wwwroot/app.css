@@ -1,0 +1,125 @@
+/* Zava Theme: introduce brand palette and base styles derived from the provided moodboards.
+   The palette focuses on deep navy/teal, soft teal accents, and clean neutrals. */
+:root {
+    /* Core brand colors (picked to approximate the Zava boards) */
+    --zava-deep: #0b1f27;     /* very dark teal/navy */
+    --zava-navy: #0e2a35;     /* primary surface */
+    --zava-muted: #586973;    /* muted text and borders */
+    --zava-teal: #97c2d3;     /* soft teal accent used for links on dark bg */
+    --zava-azure: #458ef6;    /* bright action/cta */
+    --zava-sand: #e8e0cd;     /* warm neutral */
+    --zava-white: #f7fcfd;    /* off-white */
+    --zava-brown: #955014;    /* secondary accent from warm board */
+
+    /* Bootstrap variable overrides for global readability on dark theme */
+    --bs-body-bg: transparent; /* we provide page bg below */
+    --bs-body-color: #e6f0f3;
+    --bs-heading-color: var(--zava-white);
+    --bs-link-color: var(--zava-teal);
+    --bs-link-hover-color: var(--zava-azure);
+    --bs-primary: var(--zava-azure);
+    --bs-border-color: rgba(255,255,255,0.15);
+    --bs-secondary-color: rgba(231, 243, 246, 0.75);
+}
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Apply a subtle radial gradient background matching Zava visual language */
+    background: radial-gradient(1200px 800px at 0% 0%, rgba(21,49,59,0.85) 0%, var(--zava-navy) 50%, var(--zava-deep) 100%);
+    color: var(--zava-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--zava-white); /* High contrast headings on dark surfaces */
+}
+
+h1:focus {
+    outline: none;
+}
+
+/* Links and textual buttons follow the soft teal accent; hover elevates to azure */
+a, .btn-link {
+    color: var(--zava-teal); /* Zava soft accent */
+}
+
+a:hover, .btn-link:hover {
+    color: var(--zava-azure); /* CTA blue on hover for clarity */
+}
+
+/* Primary button tuned to the Zava CTA blue */
+.btn-primary {
+    color: #001018;
+    background-color: var(--zava-azure);
+    border-color: #2f6ccc; /* darker edge for depth */
+}
+
+.btn-outline-primary {
+    color: var(--zava-azure);
+    border-color: var(--zava-azure);
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(69,142,246,.15);
+    color: var(--zava-white);
+}
+
+/* Focus ring reflects the brand accent while remaining accessible */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem var(--zava-white), 0 0 0 0.25rem var(--zava-azure);
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+/* Inputs on dark background */
+.form-control, .form-select, .form-check-input {
+    background-color: rgba(255,255,255,0.08);
+    color: var(--zava-white);
+    border-color: rgba(255,255,255,0.18);
+}
+
+.form-control::placeholder {
+    color: rgba(247,252,253,0.6);
+}
+
+/* Inputs: success/error retain clear outlines while fitting palette */
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid #d65b5b; /* softer red that works on dark */
+}
+
+.validation-message {
+    color: #ff8a8a; /* readable error text on dark */
+}
+
+/* Tables on dark theme */
+.table td, .table th { color: var(--bs-body-color); }
+.table thead th { color: var(--zava-teal); }
+.table > :not(caption) > * { border-color: var(--bs-border-color); }
+
+/* Offcanvas (cart) styling for dark theme */
+.offcanvas, .offcanvas .offcanvas-body {
+    background-color: #0e2a35;
+    color: var(--zava-white);
+}
+
+.offcanvas .offcanvas-header {
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* Error boundary banner recolored to Zava warm accent for visibility */
+.blazor-error-boundary {
+    /* replaced stock icon bg with brand background color */
+    background: #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: var(--zava-white);
+}
+
+/* Keep default message */
+.blazor-error-boundary::after {
+    content: "An error has occurred.";
+}

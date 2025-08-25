@@ -1,0 +1,21 @@
+/* Zava-themed checkout visuals: translucent card surfaces, subtle borders, and compact item rows */
+
+.checkout-card, .summary-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+}
+
+.checkout-card .card-header, .summary-card .card-header {
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    color: var(--zava-teal);
+}
+
+.order-item-image {
+    border-radius: 6px;
+    background: #0e2a35;
+}
+
+.order-item {
+    padding: 0.25rem 0;
+}

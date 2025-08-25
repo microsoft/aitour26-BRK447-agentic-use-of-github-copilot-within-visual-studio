@@ -1,0 +1,5 @@
+/* Zava offcanvas/cart adjustments for dark theme */
+.offcanvas-title { color: var(--zava-white); }
+.cart-item { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.12) !important; border-radius: 10px; }
+.cart-item h6 { color: #e8f3f6; }
+.offcanvas .btn-close { filter: invert(1) grayscale(1); }

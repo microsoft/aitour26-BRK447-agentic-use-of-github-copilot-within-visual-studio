@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Image placeholder">
+  <rect width="80" height="80" fill="#f0f0f0" />
+  <g fill="#cccccc">
+    <circle cx="28" cy="30" r="10" />
+    <rect x="20" y="45" width="40" height="20" rx="2" />
+  </g>
+  <text x="40" y="75" font-size="8" text-anchor="middle" fill="#aaaaaa">No image</text>
+</svg>

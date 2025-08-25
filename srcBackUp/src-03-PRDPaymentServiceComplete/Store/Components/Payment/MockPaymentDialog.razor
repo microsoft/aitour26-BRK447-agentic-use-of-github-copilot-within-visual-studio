@@ -1,0 +1,173 @@
+@using CartEntities
+
+<!-- Mock Payment Dialog -->
+<div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0,0,0,0.5);">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="bi bi-credit-card me-2"></i>Payment Information
+                </h5>
+                <button type="button" class="btn-close" @onclick="Cancel"></button>
+            </div>
+            <div class="modal-body">
+                @if (isProcessing)
+                {
+                    <div class="text-center py-4">
+                        <div class="spinner-border mb-3" role="status">
+                            <span class="visually-hidden">Processing...</span>
+                        </div>
+                        <h6>Processing Payment</h6>
+                        <p class="text-muted">Please wait while we process your payment...</p>
+                    </div>
+                }
+                else
+                {
+                    <!-- Order Summary -->
+                    <div class="mb-4">
+                        <h6>Order Summary</h6>
+                        <div class="border rounded p-3 bg-light">
+                            <div class="d-flex justify-content-between">
+                                <span>Total Amount:</span>
+                                <strong>@Amount.ToString("C")</strong>
+                            </div>
+                            <div class="text-muted small mt-1">
+                                @ItemCount item(s)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mock Payment Method Selection -->
+                    <div class="mb-4">
+                        <h6>Payment Method</h6>
+                        <div class="list-group">
+                            @foreach (var method in mockPaymentMethods)
+                            {
+                                <label class="list-group-item list-group-item-action">
+                                    <div class="d-flex align-items-center">
+                                        <input class="form-check-input me-3" type="radio" 
+                                               name="paymentMethod" 
+                                               value="@method.Key" 
+                                               @onchange="() => selectedPaymentMethod = method.Key" 
+                                               checked="@(selectedPaymentMethod == method.Key)" />
+                                        <div class="flex-grow-1">
+                                            <div class="fw-medium">@method.Value.DisplayName</div>
+                                            <small class="text-muted">@method.Value.Description</small>
+                                        </div>
+                                        <i class="@method.Value.Icon text-primary"></i>
+                                    </div>
+                                </label>
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Mock Card Details (for demo purposes only) -->
+                    @if (selectedPaymentMethod.StartsWith("card"))
+                    {
+                        <div class="mb-4">
+                            <h6>Card Details</h6>
+                            <div class="alert alert-info">
+                                <i class="bi bi-info-circle me-1"></i>
+                                <strong>Demo Mode:</strong> This is a mock payment system. No real payment will be processed.
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" @bind="mockCardNumber" 
+                                           placeholder="**** **** **** 1111" readonly />
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label class="form-label">Expiry</label>
+                                    <input type="text" class="form-control" value="12/25" readonly />
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label class="form-label">CVV</label>
+                                    <input type="text" class="form-control" value="***" readonly />
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrEmpty(errorMessage))
+                    {
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle me-1"></i>
+                            @errorMessage
+                        </div>
+                    }
+                }
+            </div>
+            <div class="modal-footer">
+                @if (!isProcessing)
+                {
+                    <button type="button" class="btn btn-outline-secondary" @onclick="Cancel">Cancel</button>
+                    <button type="button" class="btn btn-primary" @onclick="ProcessPayment" disabled="@string.IsNullOrEmpty(selectedPaymentMethod)">
+                        <i class="bi bi-lock me-1"></i>Pay @Amount.ToString("C")
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public decimal Amount { get; set; }
+    [Parameter] public int ItemCount { get; set; }
+    [Parameter] public EventCallback<string> OnPaymentSuccess { get; set; }
+    [Parameter] public EventCallback OnCancel { get; set; }
+
+    private bool isProcessing = false;
+    private string selectedPaymentMethod = "card_visa";
+    private string mockCardNumber = "**** **** **** 1111";
+    private string? errorMessage;
+
+    private readonly Dictionary<string, MockPaymentMethod> mockPaymentMethods = new()
+    {
+        ["card_visa"] = new("Visa **** 1111", "Visa ending in 1111", "bi bi-credit-card-fill"),
+        ["card_mastercard"] = new("Mastercard **** 2222", "Mastercard ending in 2222", "bi bi-credit-card-fill"),
+        ["card_amex"] = new("Amex **** 3333", "American Express ending in 3333", "bi bi-credit-card-fill"),
+        ["paypal"] = new("PayPal", "Pay with your PayPal account", "bi bi-paypal"),
+        ["apple_pay"] = new("Apple Pay", "Pay with Touch ID or Face ID", "bi bi-apple"),
+        ["google_pay"] = new("Google Pay", "Pay with Google Pay", "bi bi-google")
+    };
+
+    private async Task ProcessPayment()
+    {
+        try
+        {
+            isProcessing = true;
+            errorMessage = null;
+            StateHasChanged();
+
+            // Simulate payment processing delay
+            await Task.Delay(2000);
+
+            // Mock payment success (95% success rate)
+            if (Random.Shared.NextDouble() > 0.05)
+            {
+                var selectedMethod = mockPaymentMethods[selectedPaymentMethod];
+                await OnPaymentSuccess.InvokeAsync(selectedMethod.DisplayName);
+            }
+            else
+            {
+                // Simulate payment failure
+                errorMessage = "Payment declined. Please try a different payment method.";
+                isProcessing = false;
+                StateHasChanged();
+            }
+        }
+        catch (Exception)
+        {
+            errorMessage = "An error occurred while processing your payment. Please try again.";
+            isProcessing = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task Cancel()
+    {
+        await OnCancel.InvokeAsync();
+    }
+
+    private record MockPaymentMethod(string DisplayName, string Description, string Icon);
+}

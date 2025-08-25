@@ -1,0 +1,49 @@
+/* Zava products table styles to ensure readability on dark backgrounds */
+.zava-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* card-like row spacing */
+}
+
+.zava-table thead th {
+    color: var(--zava-teal);
+    font-weight: 600;
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+.zava-table tbody tr {
+    background: rgba(255,255,255,0.04); /* subtle card surface */
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+}
+
+/* Simulate rounded card rows via cell backgrounds */
+.zava-table tbody td {
+    color: var(--zava-white);
+    vertical-align: middle;
+    padding: 0.85rem 1rem;
+}
+
+.zava-table tbody tr:hover {
+    background: rgba(151, 194, 211, 0.10); /* soft teal hover */
+}
+
+.zava-img img {
+    border-radius: 8px;
+    background: #0e2a35;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+.zava-name { font-weight: 600; color: #e8f3f6; }
+.zava-desc { color: #cfe5ec; }
+.zava-price { font-weight: 600; color: #97c2d3; }
+
+/* Keep action area roomy */
+.zava-actions { white-space: nowrap; }
+
+/* Override bootstrap default table color bleed on dark */
+.table > :not(caption) > * > * {
+    background-color: transparent;
+    color: inherit;
+}

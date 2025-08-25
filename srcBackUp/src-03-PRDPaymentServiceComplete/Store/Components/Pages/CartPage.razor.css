@@ -1,0 +1,33 @@
+/* Zava cart page theming to align with Products page and global app.css.
+   Uses subtle translucent cards, teal accents, and improved spacing. */
+
+.cart-card, .summary-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+}
+
+.cart-card .card-header, .summary-card .card-header {
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    color: var(--zava-teal);
+}
+
+.cart-item {
+    border-bottom: 1px dashed rgba(255,255,255,0.12);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-image {
+    border-radius: 8px;
+    background: #0e2a35;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+.qty-controls .btn {
+    min-width: 32px;
+}
+
+.empty-state .text-muted { color: #cfe5ec !important; }
