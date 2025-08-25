@@ -53,17 +53,17 @@ Optional pre-deploys (presenter choice): pre-deploy AI resources or collect conn
 
 All demos reference the userguide files in the `session-delivery-resources/` folder. For each demo use the referenced minimal userguide for talking points and follow a short 1–2 step demo flow. If a demo is fragile or long-running, prefer a recorded segment.
 
-| Demo | Description | Minimal Guide |
-|---|---|---|
-| Introduction & Agenda | Brief session welcome and agenda. | N/A |
-| Architecture / Zava Overview | High-level architecture and key components — keep to the big picture. | [02-Zava Overview-en-US-01-minimal](/session-delivery-resources/02-Zava-Overview/brk447-02-Zava%20Overview-en-US-01-minimal.md) |
-| Copilot Features in Visual Studio | Ask vs Agent modes, completions, and quick edits inside Visual Studio. | [brk447-03-VS2022 and GHCP Overview-en-US-01-minimal](/session-delivery-resources/03-VS2022-and-GHCP-Overview/brk447-03-VS2022%20and%20GHCP%20Overview-en-US-01-minimal.md) |
-| AI Search & Unit Testing | TDD flow with Copilot scaffolding unit tests and validating results. | [](/session-delivery-resources/04-Add-single-unit-Test-for-AI-Search/brk447-04%20Add%20single%20unit%20Test%20for%20AI%20Search-en-US-01-minimal.md) |
-| MCP Servers | Brief explanation and one quick verification of a configured MCP tool. | [brk447-05 add mcp servers-en-US-01-minimal](/session-delivery-resources/05-add-mcp-servers/brk447-05%20add%20mcp%20servers-en-US-01-minimal.md) |
-| Querying Documentation (MCP) | Show how the Agent can consult Microsoft Learn or other docs to suggest code changes. | [brk447-06-query mcp ms learn-en-US-01-minimal](/session-delivery-resources/06-query-mcp-ms-learn/brk447-06-query%20mcp%20ms%20learn-en-US-01-minimal.md) |
-| Issue-Driven Development with Agent | Show the issue briefly and the Agent's plan/patch workflow (use a short prerecorded clip if long). | [brk447-07-Implement unit tests using GH Issue-en-US-01-minimal](/session-delivery-resources/07-Implement-unit-tests-using-GH-Issue/brk447-07-Implement%20unit%20tests%20using%20GH%20Issue-en-US-01-minimal.md) |
-| Image-Based UI Updates | Show before/after images and the Agent's suggested UI changes (use recorded clip if applying changes is time-consuming). | [brk447-08-update ui using agent based on images-en-US-01-minimal](/session-delivery-resources/08-update-ui-using-agent-based-on-images/brk447-08-update%20ui%20using%20agent%20based%20on%20images-en-US-01-minimal.md) |
-| Immplement Payment Service | Show how Coding Agent can implement a full Payment service (use recorded clip if applying changes is time-consuming). | [brk447-08-update ui using agent based on images-en-US-01-minimal](/session-delivery-resources/09-coding-agent-implement-payment-PRD/brk447-09-coding-agent-implement-payment-PRD-en-US-01-minimal.md) |
+| Demo | Description |
+|---|---|
+| Introduction & Agenda | Brief session welcome and agenda. |
+| [Architecture / Zava Overview](/session-delivery-resources/02-Zava-Overview/brk447-02-Zava%20Overview-en-US-01-minimal.md) | High-level architecture and key components — keep to the big picture. |
+| [Copilot Features in Visual Studio](/session-delivery-resources/03-VS2022-and-GHCP-Overview/brk447-03-VS2022%20and%20GHCP%20Overview-en-US-01-minimal.md) | Ask vs Agent modes, completions, and quick edits inside Visual Studio. |
+| [AI Search & Unit Testing](/session-delivery-resources/04-Add-single-unit-Test-for-AI-Search/brk447-04%20Add%20single%20unit%20Test%20for%20AI%20Search-en-US-01-minimal.md) | TDD flow with Copilot scaffolding unit tests and validating results. |
+| [MCP Servers](/session-delivery-resources/05-add-mcp-servers/brk447-05%20add%20mcp%20servers-en-US-01-minimal.md) | Brief explanation and one quick verification of a configured MCP tool. |
+| [Querying Documentation (MCP)](/session-delivery-resources/06-query-mcp-ms-learn/brk447-06-query%20mcp%20ms%20learn-en-US-01-minimal.md) | Show how the Agent can consult Microsoft Learn or other docs to suggest code changes. |
+| [Issue-Driven Development with Agent](/session-delivery-resources/07-Implement-unit-tests-using-GH-Issue/brk447-07-Implement%20unit%20tests%20using%20GH%20Issue-en-US-01-minimal.md) | Show the issue briefly and the Agent's plan/patch workflow (use a short prerecorded clip if long). |
+| [Image-Based UI Updates](/session-delivery-resources/08-update-ui-using-agent-based-on-images/brk447-08-update%20ui%20using%20agent%20based%20on%20images-en-US-01-minimal.md) | Show before/after images and the Agent's suggested UI changes (use recorded clip if applying changes is time-consuming). |
+| [Implement Payment Service](/session-delivery-resources/09-coding-agent-implement-payment-PRD/brk447-09-coding-agent-implement-payment-PRD-en-US-01-minimal.md) | Show how Coding Agent can implement a full Payment service (use recorded clip if applying changes is time-consuming). |
 
 For each demo keep live interactions short and reserve complex changes for recorded segments.
 
