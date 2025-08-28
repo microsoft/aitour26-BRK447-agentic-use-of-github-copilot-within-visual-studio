@@ -26,8 +26,8 @@ Check the [Session Delivery Resources folder](./session-delivery-resources/) for
 
 | Resource | Path |
 |---|---:|
-| Presenter Guide (full) | [docs\BRK447-Presenter-Guide.md](docs/BRK447-Presenter-Guide.md) |
-| Initial Setup Guide | [docs\01-InitialSetup.md](docs/01-InitialSetup.md) |
+| Presenter Guide (full) | [session-delivery-resources/docs/BRK447-Presenter-Guide.md](session-delivery-resources/docs/BRK447-Presenter-Guide.md) |
+| Initial Setup Guide | [session-delivery-resources/docs/01-InitialSetup.md](session-delivery-resources/docs/01-InitialSetup.md) |
 | Slides | [EN-US_BRK447_Tech_FY26.pptx](https://aka.ms/AAxqj50) |
 
 Place any source code, demos, or session-specific artifacts in this `src/` folder. Follow the docs in the `docs/` folder for step-by-step setup and demo scripts.

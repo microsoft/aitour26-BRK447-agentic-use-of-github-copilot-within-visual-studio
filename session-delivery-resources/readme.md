@@ -12,7 +12,7 @@ Prior to delivering the workshop please:
 
 | Resources | Links | Description |
 |---|---|---|
-| Session Delivery Deck | [Deck](https://aka.ms/AAxqj50>) | The session delivery slides |
+| Session Delivery Deck | [Deck](https://aka.ms/AAxqj50) | The session delivery slides |
 | Demo source code | [demo source code](../src/) | Demo Source Code |
 | Demo source code BackUp | [demo source code backup](../srcBackUp/) | Source Code completed for each one of the demo steps |
 
