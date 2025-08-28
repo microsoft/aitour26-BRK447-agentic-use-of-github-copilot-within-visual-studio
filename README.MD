@@ -22,12 +22,13 @@ BRK-447 demonstrates how to use GitHub Copilot inside Visual Studio to accelerat
 
 ## 🔗 Session Resources
 
+Check the [Session Delivery Resources folder](./session-delivery-resources/) for the whole set of materials.
+
 | Resource | Path |
 |---|---:|
 | Presenter Guide (full) | [docs\BRK447-Presenter-Guide.md](docs/BRK447-Presenter-Guide.md) |
 | Initial Setup Guide | [docs\01-InitialSetup.md](docs/01-InitialSetup.md) |
-| Slides | coming soon |
-| Video Recordings | coming soon |
+| Slides | [EN-US_BRK447_Tech_FY26.pptx](https://aka.ms/AAxqj50) |
 
 Place any source code, demos, or session-specific artifacts in this `src/` folder. Follow the docs in the `docs/` folder for step-by-step setup and demo scripts.
 
