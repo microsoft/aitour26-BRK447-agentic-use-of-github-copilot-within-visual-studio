@@ -19,6 +19,7 @@
     <ProjectReference Include="..\CartEntities\CartEntities.csproj" />
     <ProjectReference Include="..\DataEntities\DataEntities.csproj" />
     <ProjectReference Include="..\SearchEntities\SearchEntities.csproj" />
+    <ProjectReference Include="..\VectorEntities\VectorEntities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
