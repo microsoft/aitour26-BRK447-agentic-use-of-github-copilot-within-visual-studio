@@ -12,8 +12,7 @@ Prior to delivering the workshop please:
 
 | Resources | Links | Description |
 |---|---|---|
-| Workshop Slide Deck | [Presentation](https://aka.ms/) | Presentation slides for this workshop with presenter notes and embedded demo video |
-| Session Delivery Deck | [Deck](https://aka.ms/) | The session delivery slides |
+| Session Delivery Deck | [Deck](https://aka.ms/AAxqj50>) | The session delivery slides |
 | Demo source code | [demo source code](../src/) | Demo Source Code |
 | Demo source code BackUp | [demo source code backup](../srcBackUp/) | Source Code completed for each one of the demo steps |
 
@@ -23,17 +22,17 @@ The workshop mixes short live demos (30–90s) with recorded segments for longer
 
 ### 🕐 Timing
 
-| Time | Description | Type, content or demos |
-|---:|---|---|
-| 05 mins |  Introduction | content |
-| 04 mins |  Demo 1 | demos: 02-Zava-Overview (00:57), 03-VS2022-and-GHCP-Overview (02:43) |
-| 03 mins |  GH Copilot Agents | content |
-| 04 mins |  Demo 2 | demos: 04-Add-single-unit-Test-for-AI-Search (04:02) |
-| 05 mins |  MCP Tools | content |
-| 07 mins |  Demo 3 | demos: 05-add-mcp-servers (02:42), (optional) 06-query-mcp-ms-learn (03:45), 07-Implement-unit-tests-using-GH-Issue (04:35) |
-| 03 mins |  Coding Agent | content |
-| 09 mins |  Demo 4 | demos: 08-update-ui-using-agent-based-on-images (05:05), 09-coding-agent-implement-payment-PRD (03:35) |
-| 02 mins |  WrapUp | content |
+| Time | Description | Type, content or demos | Links |
+|---:|---|---|---|
+| 05 mins |  Introduction | content | |
+| 04 mins |  Demo 1 | demos | [02-Zava-Overview (00:57)](https://aka.ms/AAxqc9f) <br/> [03-VS2022-and-GHCP-Overview (02:43)](https://aka.ms/AAxqj53) |
+| 03 mins |  GH Copilot Agents | content | |
+| 04 mins |  Demo 2 | demos: 04-Add-single-unit-Test-for-AI-Search (04:02) | |
+| 05 mins |  MCP Tools | content | |
+| 07 mins |  Demo 3 | demos: 05-add-mcp-servers (02:42), (optional) 06-query-mcp-ms-learn (03:45), 07-Implement-unit-tests-using-GH-Issue (04:35) | |
+| 03 mins |  Coding Agent | content | |
+| 09 mins |  Demo 4 | demos: 08-update-ui-using-agent-based-on-images (05:05), 09-coding-agent-implement-payment-PRD (03:35) | |
+| 02 mins |  WrapUp | content | |
 
 > Timing table left intentionally as-is per instructions (time cells left empty for manual updates).
 
