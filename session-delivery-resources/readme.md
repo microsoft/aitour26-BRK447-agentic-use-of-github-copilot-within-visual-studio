@@ -100,23 +100,3 @@ All demos reference the userguide files in the `session-delivery-resources/` fol
 | [Implement Payment Service](/session-delivery-resources/09-coding-agent-implement-payment-PRD/brk447-09-coding-agent-implement-payment-PRD-en-US-01-minimal.md) | Show how Coding Agent can implement a full Payment service (use recorded clip if applying changes is time-consuming). |
 
 For each demo keep live interactions short and reserve complex changes for recorded segments.
-
-## Engagement Strategies
-
-- For demos that are long-running or brittle to run live, use recorded videos with voice-over rather than attempting a live run.
-- Keep live demos short (30–90 seconds) and reserve complex changes for recorded segments.
-- Invite audience questions during short pauses between demos and use the final Q&A for deeper discussion.
-
-## Presenter Notes and Quick Tips
-
-- Keep the session focused on practical demonstrations and avoid deep infrastructure tasks during the live session.
-- If you must show environment setup, show only verification steps during the session and leave full setup to the pre-session guide.
-- Use the referenced userguides for copy/paste snippets and backup clips.
-
-## Quick Reference Links
-
-### Essential Documentation
-
-- [Initial Setup Guide](./docs/01-InitialSetup.md)
-- [PRD Template](./docs/04-PRD_Add_Payment_Mock_Server.md)
-- [Issue Creation Template](./docs/02-Create_Issue_for_unit_tests.md)
