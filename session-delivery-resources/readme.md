@@ -42,7 +42,11 @@ The workshop mixes short live demos with recorded segments for reference.
   - [Initial Setup Guide](/session-delivery-resources/01-Initial-Setup/brk447-01-Initial%20Setup-en-US-01-minimal.md)
   - [01-Initial Setup](https://aka.ms/AAxqc9i)
 - Set up Azure AI services and local development environment
-- 2 hours before the live session, run the following steps:
+- 2 hours before the live session, run the steps 1, 2 and 3 below to generate new content for the session.
+- Optionally you can use these elements for the demo:
+  - Sample Issue: [#3 - Add missing unit tests for Products, Store, and domain entities](https://github.com/microsoft/aitour26-BRK447-agentic-use-of-github-copilot-within-visual-studio/issues/3)
+  - Pull Request to solve Issue #3: [PR #4](https://github.com/microsoft/aitour26-BRK447-agentic-use-of-github-copilot-within-visual-studio/pull/4)
+  - Pull Request to generate PRD: [#5](https://github.com/microsoft/aitour26-BRK447-agentic-use-of-github-copilot-within-visual-studio/pull/5)
 
 #### Step 1 - Create the GitHub Issue for Missing Unit Tests
 
@@ -57,6 +61,28 @@ Assing the new created issue to GitHub Copilot.
 Validate that once the issue is assigned, a new PR should be created, similar to this one.
 
 ![Copilot creates a new Pull Request to solve the issue](./images/12-CopilotCreatesPRToSolveIssue.png)
+
+## Step 3 - Instruct Copilot Coding Agent to Create a PRD
+
+Open the Agent Panel, and use the following prompt to ask Copilot Coding Agent to create a PRD.
+
+**Prompt:**
+
+```
+Create a new Markdown file named `04-PRD_Add_Payment_Mock_Server.md` containing a Product Requirements Document (PRD) titled "PRD: Add Mock Payment Server / Payment Service to Zava-Aspire".
+
+Keep the document business-focused and concise. Include these sections: Purpose, Scope, Key success criteria, Quick checklist, Assumptions, High-level design overview, API contract summary (just endpoint names and intent), Data model summary (tables/fields at a high level), Implementation notes (brief: suggest a Blazor Server service, DB, and Store integration), Configuration & local defaults (suggested env keys and local port), Security & privacy notes, Testing & validation, Acceptance criteria, Rollout plan, and an Appendix with example request/response JSON.
+
+Use clear headings, bullet lists, and short code blocks for the example JSON.
+
+Example file metadata: Date (today's date), Author: (current user) & Copilot (documentation draft).
+```
+
+Reference:
+
+![Ask Coding Agent to create a PRD](./images/20-AgentPanelCreatePRD.png)
+
+This should also create a corresponding Pull Request for review.
 
 ### 🖼️ Demos
 
