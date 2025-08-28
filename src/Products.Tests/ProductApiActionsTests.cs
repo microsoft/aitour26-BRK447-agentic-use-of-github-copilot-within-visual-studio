@@ -2,6 +2,11 @@
 using Products.Models;
 using DataEntities;
 using Products.Endpoints;
+using Products.Memory;
+using SearchEntities;
+using Microsoft.Extensions.AI;
+using Microsoft.Extensions.Logging;
+using Moq;
 
 namespace Products.Tests
 {
@@ -146,6 +151,77 @@ namespace Products.Tests
                 Assert.IsNotNull(okNoResult);
                 Assert.AreEqual(0, okNoResult.Value.Products.Count);
                 Assert.IsTrue(okNoResult.Value.Response.Contains("No products found"));
+            }
+        }
+
+        [TestMethod]
+        public async Task AISearch_ReturnsOk_WithSearchResponse()
+        {
+            // Arrange
+            using (var context = new Context(_dbOptions))
+            {
+                context.Product.Add(new Product { Id = 1, Name = "Test Product", Description = "Test Description", Price = 10.99m, ImageUrl = "test.jpg" });
+                context.SaveChanges();
+            }
+
+            using (var context = new Context(_dbOptions))
+            {
+                var mockLogger = new Mock<ILogger>();
+                
+                // Create a mock MemoryContext to avoid complex AI dependencies
+                var mockMemoryContext = new Mock<MemoryContext>(mockLogger.Object, null, null);
+                mockMemoryContext.Setup(x => x.Search(It.IsAny<string>(), It.IsAny<Context>()))
+                    .ReturnsAsync(new SearchResponse { Response = "Mock AI response", Products = new List<Product>() });
+
+                // Act
+                var result = await ProductAiActions.AISearch("test search", context, mockMemoryContext.Object);
+
+                // Assert
+                var okResult = result as Microsoft.AspNetCore.Http.HttpResults.Ok<SearchResponse>;
+                Assert.IsNotNull(okResult);
+                Assert.IsNotNull(okResult.Value);
+                Assert.AreEqual("Mock AI response", okResult.Value.Response);
+            }
+        }
+
+        [TestMethod]
+        public void DbInitializer_Initialize_CreatesSeedProducts()
+        {
+            // Arrange
+            using (var context = new Context(_dbOptions))
+            {
+                // Ensure database is empty
+                context.Product.RemoveRange(context.Product);
+                context.SaveChanges();
+                Assert.AreEqual(0, context.Product.Count());
+
+                // Act
+                DbInitializer.Initialize(context);
+
+                // Assert
+                Assert.IsTrue(context.Product.Count() > 0, "Products should be seeded");
+                var firstProduct = context.Product.First();
+                Assert.IsNotNull(firstProduct.Name);
+                Assert.IsTrue(firstProduct.Price > 0);
+                Assert.IsNotNull(firstProduct.Description);
+            }
+        }
+
+        [TestMethod]
+        public void DbInitializer_Initialize_DoesNotSeedWhenProductsExist()
+        {
+            // Arrange
+            using (var context = new Context(_dbOptions))
+            {
+                context.Product.Add(new Product { Id = 999, Name = "Existing Product", Description = "Already exists", Price = 5.99m, ImageUrl = "existing.jpg" });
+                context.SaveChanges();
+                var existingCount = context.Product.Count();
+
+                // Act
+                DbInitializer.Initialize(context);
+
+                // Assert
+                Assert.AreEqual(existingCount, context.Product.Count(), "Should not add more products when products already exist");
             }
         }
     }
