@@ -39,7 +39,7 @@ The workshop mixes short live demos with recorded segments for reference.
 #### Essential Pre-Session Requirements
 
 - Review the Initial Setup guide and recorded setup video:
-  - [Initial Setup Guide](/session-delivery-resources/01-Initial-Setup/brk447-01-Initial%20Setup-en-US-01-minimal.md)
+  - [Initial Setup Guide](./docs/01-InitialSetup.md)
   - [01-Initial Setup](https://aka.ms/AAxqc9i)
 - Set up Azure AI services and local development environment
 - 2 hours before the live session, run the steps 1, 2 and 3 below to generate new content for the session.
@@ -50,7 +50,7 @@ The workshop mixes short live demos with recorded segments for reference.
 
 #### Step 1 - Create the GitHub Issue for Missing Unit Tests
 
-Purpose: This step requires to create a GitHub Issue in the demo repository. The Issue content can be copy & paste from the existing issue [#3](https://github.com/microsoft/aitour26-BRK447-agentic-use-of-github-copilot-within-visual-studio/issues/3) or from the file [02-Create_Issue_for_unit_tests.md](./02-Create_Issue_for_unit_tests.md).
+Purpose: This step requires to create a GitHub Issue in the demo repository. The Issue content can be copy & paste from the existing issue [#3](https://github.com/microsoft/aitour26-BRK447-agentic-use-of-github-copilot-within-visual-studio/issues/3) or from the file [02-Create_Issue_for_unit_tests.md](./docs/02-Create_Issue_for_unit_tests.md).
 
 #### Step 2 - Assing the new created isssue to Copilot
 
@@ -69,7 +69,7 @@ Open the Agent Panel, and use the following prompt to ask Copilot Coding Agent t
 **Prompt:**
 
 ```text
-Create a new Markdown file named `04-PRD_Add_Payment_Mock_Server.md` containing a Product Requirements Document (PRD) titled "PRD: Add Mock Payment Server / Payment Service to Zava-Aspire".
+Create a new Markdown file named `04-PRD_Add_Payment_Mock_Server.md` containing a Product Requirements Document (PRD) titled "PRD: Add Mock Payment Server / Payment Service to Zava-Aspire". See [04-PRD_Add_Payment_Mock_Server.md](./docs/04-PRD_Add_Payment_Mock_Server.md).
 
 Keep the document business-focused and concise. Include these sections: Purpose, Scope, Key success criteria, Quick checklist, Assumptions, High-level design overview, API contract summary (just endpoint names and intent), Data model summary (tables/fields at a high level), Implementation notes (brief: suggest a Blazor Server service, DB, and Store integration), Configuration & local defaults (suggested env keys and local port), Security & privacy notes, Testing & validation, Acceptance criteria, Rollout plan, and an Appendix with example request/response JSON.
 
@@ -117,6 +117,6 @@ For each demo keep live interactions short and reserve complex changes for recor
 
 ### Essential Documentation
 
-- [Initial Setup Guide](01-InitialSetup.md)
-- [PRD Template](04-PRD_Add_Payment_Mock_Server.md)
-- [Issue Creation Template](02-Create_Issue_for_unit_tests.md)
+- [Initial Setup Guide](./docs/01-InitialSetup.md)
+- [PRD Template](./docs/04-PRD_Add_Payment_Mock_Server.md)
+- [Issue Creation Template](./docs/02-Create_Issue_for_unit_tests.md)

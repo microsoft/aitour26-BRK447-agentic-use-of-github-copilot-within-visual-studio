@@ -1,8 +1,8 @@
 <!--
-	Canonical infra-only deployment guide for AI Foundry (Cognitive Services / OpenAI)
-	Created: 2025-08-22
-	This file provides prerequisites (including Visual Studio 2022 and Docker Desktop) and
-	the minimal subscription-scoped deployment steps for demo usage.
+    Canonical infra-only deployment guide for AI Foundry (Cognitive Services / OpenAI)
+    Created: 2025-08-22
+    This file provides prerequisites (including Visual Studio 2022 and Docker Desktop) and
+    the minimal subscription-scoped deployment steps for demo usage.
 -->
 
 # Infra-only deploy (AI Foundry) — step-by-step

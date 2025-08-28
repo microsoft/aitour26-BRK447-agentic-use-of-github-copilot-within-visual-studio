@@ -1,3 +1,4 @@
+```markdown
 # BRK-447 Presenter Guide: Real-World AI Development with Visual Studio and GitHub Copilot
 
 This concise presenter guide is optimized for a technical presenter delivering session BRK-447. It focuses on live/demonstration flow, essential prerequisites, and clear pre-session preparation.
@@ -82,3 +83,5 @@ For each demo, use the referenced minimal userguide for talking points and follo
 - Initial Setup Guide: `docs/01-InitialSetup.md`
 - PRD Template: `docs/04-PRD_Add_Payment_Mock_Server.md`
 - Issue Creation Template: `docs/02-Create_Issue_for_unit_tests.md`
+
+```

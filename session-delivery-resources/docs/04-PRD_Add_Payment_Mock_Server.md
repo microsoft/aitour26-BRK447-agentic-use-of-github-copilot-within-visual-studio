@@ -5,23 +5,23 @@ Author: Bruno Capuano & Copilot (documentation draft)
 
 This document describes a Product Requirements Document (PRD) for adding a mock payment processing capability to the Zava-Aspire solution located in `src/`.
 
-Purpose
+## Purpose
 
 - Provide a lightweight, mock payment flow for the `Store` frontend so checkout can be demonstrated end-to-end without integrating a real payment provider.
 - Introduce a new Blazor Server-based Payment Service that is registered with .NET Aspire and persists payment records to a new `paymentsdb`.
 
-Scope (what we'll deliver)
+## Scope (what we'll deliver)
 
 - A new Blazor Server project `src/PaymentsService` that exposes an API and a web UI to view processed payments.
 - Integration points in `src/ZavaAppHost` to provision `paymentsdb` and pass the connection string to the Payment Service via Aspire configuration.
 - A mock payment dialog/flow in `src/Store` that prompts the user at checkout and calls the Payment Service `POST /api/payments` endpoint.
 
-Key success criteria
+## Key success criteria
 
 - The Store checkout flow invokes a mock payment prompt and posts purchase details to the Payment Service.
 - The Payment Service stores each payment in `paymentsdb` and the Payments UI shows persisted payments.
 
-Quick checklist (maps to user requirements)
+## Quick checklist (maps to user requirements)
 
 - [ ] Mock server design: described in this PRD (processing, storage, UI).
 - [ ] Checkout prompt: Store UI triggers mock payment and returns a selected mock payment method.
@@ -31,19 +31,19 @@ Quick checklist (maps to user requirements)
 - [ ] Aspire host: provisions `paymentsdb` and passes connection string.
 - [ ] Payments UI: grid showing processed payments with optional product enrichment.
 
-Assumptions
+## Assumptions
 
 - Repository targets .NET 9 and the Aspire host is already configured in `src/ZavaAppHost`.
 - Local dev uses project references and file-based or lightweight DBs (SQLite) by default for demos.
 - No real payment gateway integration is required; this is a sandbox/mock flow only.
 
-Design overview
+## Design overview
 
 - Service: `PaymentsService` (Blazor Server, net9.0) — exposes Web API for payments and a Blazor UI to view stored payments.
 - Storage: `paymentsdb` — created/provisioned by the Aspire host; suggested provider for local dev: SQLite (file: `Data/payments.db`).
 - Frontend: `Store` will show a mock payment dialog at checkout and call the Payment Service API.
 
-Project layout suggestion
+## Project layout suggestion
 
 - `src/PaymentsService/`
   - `PaymentsService.csproj` (net9.0)
@@ -55,7 +55,7 @@ Project layout suggestion
   - `Data/PaymentsDbContext.cs` (EF Core)
   - `Services/ProductEnricher.cs` (optional enrichment from Products DB)
 
-API contract
+## API contract
 
 - POST `/api/payments`
   - Request (JSON):
@@ -73,7 +73,7 @@ API contract
   - Query: `page`, `pageSize`, `status?`
   - Response: `{ items: PaymentRecord[], totalCount: int }`
 
-Data model (paymentsdb)
+## Data model (paymentsdb)
 
 - Table: `Payments` (columns)
   - `PaymentId` (GUID PK)
@@ -89,7 +89,7 @@ Data model (paymentsdb)
   - `CreatedAt` (datetime)
   - `ProcessedAt` (datetime)
 
-Implementation details
+## Implementation details
 
 1) Payment Service (Blazor Server)
 
@@ -115,7 +115,7 @@ Implementation details
 
 - PaymentsService may optionally call the Products service API to map `productId` to product `title` or `sku` for display. This should be implemented behind a feature flag and be tolerant to failures.
 
-Configuration & local defaults
+## Configuration & local defaults
 
 - Suggested local ports:
   - PaymentsService: `http://localhost:5004`
@@ -125,18 +125,18 @@ Configuration & local defaults
   - `Services:PaymentsService` (base URL)
   - `Payments:MockMode` (bool) — when true, simulate payment responses, else behave as configured.
 
-Security & privacy notes
+## Security & privacy notes
 
 - Do not log raw card data. Use masked payment method strings only.
 - For local demo, authentication between services may be relaxed; for production, enable service-to-service authentication via Aspire.
 
-Testing & validation
+## Testing & validation
 
 - Unit tests: `PaymentRepository`, `PaymentsController`.
 - Integration test: start Aspire host + PaymentsService + Store and run a test checkout flow; assert a row in `paymentsdb`.
 - Manual smoke: Run Store, go to `/checkout`, perform mock payment, verify success and payment visible at Payments UI.
 
-Acceptance criteria (detailed)
+## Acceptance criteria (detailed)
 
 - [ ] Payment Service project exists at `src/PaymentsService` and targets `net9.0`.
 - [ ] PaymentsService registers with Aspire (commented location in `Program.cs`).
@@ -145,7 +145,7 @@ Acceptance criteria (detailed)
 - [ ] PaymentsService persists payment records and makes them available via `GET /api/payments`.
 - [ ] Payments UI displays payments in a pageable/sortable grid and shows product titles when enrichment is available.
 
-Developer implementation checklist (detailed tasks)
+## Developer implementation checklist (detailed tasks)
 
 1. Create Blazor Server project: `dotnet new blazorserver -n PaymentsService -o src/PaymentsService --framework net9.0`.
 2. Add NuGet packages: `Microsoft.EntityFrameworkCore`, `Microsoft.EntityFrameworkCore.Sqlite`, Aspire packages, `Swashbuckle.AspNetCore` (optional).
@@ -156,13 +156,13 @@ Developer implementation checklist (detailed tasks)
 7. Update `src/Store` to add `PaymentsClient` typed HttpClient and a mock payment dialog component.
 8. Add unit and integration tests.
 
-Open questions for reviewers
+## Open questions for reviewers
 
 - Preferred DB provider for CI and production? (SQLite for local demos, SQL Server or Azure SQL for production.)
 - Confirm default local port for PaymentsService (suggest `5004`).
 - Confirm authentication approach for service-to-service calls in non-local environments.
 
-Rollout plan
+## Rollout plan
 
 1. Add the PaymentsService skeleton with in-memory persistence and `POST /api/payments`.
 2. Wire Aspire host to provide `paymentsdb` connection string.
@@ -170,7 +170,7 @@ Rollout plan
 4. Add UI page and enrichment.
 5. Update Store and add E2E tests.
 
-Appendix: example DTOs and API request/response
+## Appendix: example DTOs and API request/response
 
 CreatePaymentRequest
 
@@ -210,5 +210,3 @@ Notes
 - This PRD intentionally does not change code. Implementation work should be done in a follow-up PR. Add inline comments in code where Aspire registration and DB provisioning occur so reviewers can verify compliance.
 
 ---
-
-<!-- End of PRD -->
