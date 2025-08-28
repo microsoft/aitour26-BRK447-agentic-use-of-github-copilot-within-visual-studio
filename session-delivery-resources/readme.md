@@ -44,9 +44,19 @@ The workshop mixes short live demos with recorded segments for reference.
 - Set up Azure AI services and local development environment
 - 2 hours before the live session, run the following steps:
 
-#### Tutorial: Create the GitHub Issue for Missing Unit Tests
+#### Step 1 - Create the GitHub Issue for Missing Unit Tests
 
 Purpose: This step requires to create a GitHub Issue in the demo repository. The Issue content can be copy & paste from the existing issue [#3](https://github.com/microsoft/aitour26-BRK447-agentic-use-of-github-copilot-within-visual-studio/issues/3) or from the file [02-Create_Issue_for_unit_tests.md](./02-Create_Issue_for_unit_tests.md).
+
+#### Step 2 - Assing the new created isssue to Copilot
+
+Assing the new created issue to GitHub Copilot.
+
+![Assign issue to Copilot](./images/10-assignIssueToCopilot.png)
+
+Validate that once the issue is assigned, a new PR should be created, similar to this one.
+
+![Copilot creates a new Pull Request to solve the issue](./images/12-CopilotCreatesPRToSolveIssue.png)
 
 ### 🖼️ Demos
 
