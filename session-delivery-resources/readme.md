@@ -22,17 +22,17 @@ The workshop mixes short live demos with recorded segments for reference.
 
 ### 🕐 Timing
 
-| Time | Description | Type, content or demos | Links |
-|---:|---|---|---|
-| 05 mins |  Introduction | content | |
-| 04 mins |  Demo 1 | demos | [02-Zava-Overview](https://aka.ms/AAxqc9f) <br/> [03-VS2022-and-GHCP-Overview](https://aka.ms/AAxqj53) |
-| 03 mins |  GH Copilot Agents | content | |
-| 04 mins |  Demo 2 | demos  | [04-Add-single-unit-Test-for-AI-Search](https://aka.ms/AAxqc9g) |
-| 05 mins |  MCP Tools | content | |
-| 07 mins |  Demo 3 | demos | [05-add-mcp-servers](https://aka.ms/AAxqc9j) <br /> [(optional) 06-query-mcp-ms-learn](https://aka.ms/AAxq4rk) <br /> [07-Implement-unit-tests-using-GH-Issue](https://aka.ms/AAxqj52) |
-| 03 mins |  Coding Agent | content | |
-| 09 mins |  Demo 4 | demos | [08-update-ui-using-agent-based-on-images](https://aka.ms/AAxq4rn) <br /> [09-coding-agent-implement-payment-PRD](https://aka.ms/AAxqc9e) |
-| 02 mins |  WrapUp | content | |
+| Time | Description |  Links |
+|---:|---|---|
+| 05 mins | Introduction |  |
+| 04 mins | demos | [02-Zava-Overview](https://aka.ms/AAxqc9f) <br/> [03-VS2022-and-GHCP-Overview](https://aka.ms/AAxqj53) |
+| 03 mins | GH Copilot Agents | |
+| 04 mins | demos  | [04-Add-single-unit-Test-for-AI-Search](https://aka.ms/AAxqc9g) |
+| 05 mins | MCP Tools | content |
+| 07 mins | demos | [05-add-mcp-servers](https://aka.ms/AAxqc9j) <br /> [(optional) 06-query-mcp-ms-learn](https://aka.ms/AAxq4rk) <br /> [07-Implement-unit-tests-using-GH-Issue](https://aka.ms/AAxqj52) |
+| 03 mins | Coding Agent | content |
+| 09 mins | demos | [08-update-ui-using-agent-based-on-images](https://aka.ms/AAxq4rn) <br /> [09-coding-agent-implement-payment-PRD](https://aka.ms/AAxqc9e) |
+| 02 mins | WrapUp | content |
 
 ### 🏋️ Preparation
 
@@ -46,7 +46,7 @@ The workshop mixes short live demos with recorded segments for reference.
 
 #### Tutorial: Create the GitHub Issue for Missing Unit Tests
 
-Purpose: This step requires to create a GitHub Issue. The  Issue content can be copy & paste from the [02-Create_Issue_for_unit_tests.md](./02-Create_Issue_for_unit_tests.md).
+Purpose: This step requires to create a GitHub Issue in the demo repository. The Issue content can be copy & paste from the [02-Create_Issue_for_unit_tests.md](./02-Create_Issue_for_unit_tests.md).
 
 ### 🖼️ Demos
 
