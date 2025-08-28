@@ -18,7 +18,7 @@ Prior to delivering the workshop please:
 
 ## 🚀 Get Started
 
-The workshop mixes short live demos (30–90s) with recorded segments for longer or fragile flows. Follow the step-by-step user guides in the `docs/` folder for setup and demo scripts.
+The workshop mixes short live demos with recorded segments for reference.
 
 ### 🕐 Timing
 
@@ -36,17 +36,17 @@ The workshop mixes short live demos (30–90s) with recorded segments for longer
 
 ### 🏋️ Preparation
 
-These items are required as presenter pre-work and should NOT be listed as session objectives.
-
-Essential Pre-Setup Requirements:
+#### Essential Pre-Setup Requirements
 
 - Review the Initial Setup guide and recorded setup video:
   - [Initial Setup Guide](/session-delivery-resources/01-Initial-Setup/brk447-01-Initial%20Setup-en-US-01-minimal.md)
   - [01-Initial Setup](https://aka.ms/AAxqc9i)
 - Set up Azure AI services and local development environment
-- Run coding agent actions before the event
+- 2 hours before the live session, run the following steps:
 
-Optional pre-deploys (presenter choice): pre-deploy AI resources or collect connection strings if you plan to demo live services — otherwise use the recorded video segments described in Engagement Strategies.
+#### Tutorial: Create the GitHub Issue for Missing Unit Tests
+
+Purpose: This step requires to create a GitHub Issue. The  Issue content can be copy & paste from the [02-Create_Issue_for_unit_tests.md](./02-Create_Issue_for_unit_tests.md).
 
 ### 🖼️ Demos
 
