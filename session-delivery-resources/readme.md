@@ -13,6 +13,7 @@ Prior to delivering the workshop please:
 | Resources | Links | Description |
 |---|---|---|
 | Session Delivery Deck | [Deck](https://aka.ms/AAxqj50) | The session delivery slides |
+| Full Session TTT | [TTT Video -coming soon]() | The session end-to-end recorded video |
 | Demo source code | [demo source code](../src/) | Demo Source Code |
 | Demo source code BackUp | [demo source code backup](../srcBackUp/) | Source Code completed for each one of the demo steps |
 
