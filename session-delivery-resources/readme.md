@@ -22,9 +22,9 @@ The workshop mixes short live demos with recorded segments for reference.
 
 ### 🕐 Timing
 
-| Time | Description |  Links |
+| Time | Description |  Video Links |
 |---:|---|---|
-| 05 mins | Introduction |  |
+| 03 mins | Introduction |  |
 | 04 mins | demos | [02-Zava-Overview](https://aka.ms/AAxqc9f) <br/> [03-VS2022-and-GHCP-Overview](https://aka.ms/AAxqj53) |
 | 03 mins | GH Copilot Agents | |
 | 04 mins | demos  | [04-Add-single-unit-Test-for-AI-Search](https://aka.ms/AAxqc9g) |
