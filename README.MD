@@ -14,11 +14,10 @@ BRK-447 demonstrates how to use GitHub Copilot inside Visual Studio to accelerat
 
 ## 💻 Technologies Used
 
-- `.NET SDK` (project targets .NET 9)
 - `Visual Studio 2022`
 - `GitHub Copilot` extension and Copilot Agents
 - `Azure AI` services (optional for live demos)
-- MCP (Model Context Protocol) servers for documentation and tooling integration
+- `MCP (Model Context Protocol)` servers for documentation and tooling integration
 
 ## 🔗 Session Resources
 
@@ -26,13 +25,8 @@ Check the [Session Delivery Resources folder](./session-delivery-resources/) for
 
 | Resource | Path |
 |---|---:|
-| Presenter Guide (full) | [session-delivery-resources/docs/BRK447-Presenter-Guide.md](session-delivery-resources/docs/BRK447-Presenter-Guide.md) |
-| Initial Setup Guide | [session-delivery-resources/docs/01-InitialSetup.md](session-delivery-resources/docs/01-InitialSetup.md) |
+| Presenter Guide (full) | [session-delivery-resources/readme.md](session-delivery-resources/readme.md)
 | Slides | [EN-US_BRK447_Tech_FY26.pptx](https://aka.ms/AAxqj50) |
-
-Place any source code, demos, or session-specific artifacts in this `src/` folder. Follow the docs in the `docs/` folder for step-by-step setup and demo scripts.
-
-If you need to run or build samples, ensure you have the required SDKs installed (see the Initial Setup Guide).
 
 ## Content Owners
 
