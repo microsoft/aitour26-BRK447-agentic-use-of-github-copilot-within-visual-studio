@@ -46,7 +46,7 @@ The workshop mixes short live demos with recorded segments for reference.
 
 #### Tutorial: Create the GitHub Issue for Missing Unit Tests
 
-Purpose: This step requires to create a GitHub Issue in the demo repository. The Issue content can be copy & paste from the [02-Create_Issue_for_unit_tests.md](./02-Create_Issue_for_unit_tests.md).
+Purpose: This step requires to create a GitHub Issue in the demo repository. The Issue content can be copy & paste from the existing issue [#3](https://github.com/microsoft/aitour26-BRK447-agentic-use-of-github-copilot-within-visual-studio/issues/3) or from the file [02-Create_Issue_for_unit_tests.md](./02-Create_Issue_for_unit_tests.md).
 
 ### 🖼️ Demos
 
