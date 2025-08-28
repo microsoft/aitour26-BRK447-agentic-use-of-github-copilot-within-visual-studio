@@ -1,15 +1,16 @@
 # Video: [brk447-02-Zava Overview.mkv](./REPLACE_WITH_VIDEO_LINK) — 00:00:57
 
-# SAVA Migration — E-commerce User Manual
+# ZAVA Migration — E-commerce User Manual
 
-This manual describes the user interactions demonstrated in the video walkthrough of the migration to the new SAVA e-commerce experience. It explains how to add items to the cart, validate search-result behavior, and exercise the checkout flow while documenting missing or outstanding behaviors for the development team.
+This manual describes the user interactions demonstrated in the video walkthrough of the migration to the new ZAVA e-commerce experience. It explains how to add items to the cart, validate search-result behavior, and exercise the checkout flow while documenting missing or outstanding behaviors for the development team.
 
 ---
 
 ## Overview
+
 Duration shown in video: 00:00:03.720 – 00:00:55.480
 
-This project migrates existing e-commerce sites to the SAVA application. The team is deploying services and integrating UI behaviors as part of the migration. The video demonstrates:
+This project migrates existing e-commerce sites to the ZAVA application. The team is deploying services and integrating UI behaviors as part of the migration. The video demonstrates:
 
 - Adding products to a cart and verifying the cart contents (00:00:14.240 – 00:00:30.954)  
 - Searching for a product and identifying a missing "Add to cart" option in search results (00:00:30.954 – 00:00:38.440)  
@@ -21,28 +22,32 @@ Use this manual to reproduce those actions, verify expected behaviors, and captu
 
 ## Step-by-step instructions
 
-### 1. Context — Accessing the SAVA application
+### 1. Context — Accessing the ZAVA application
+
 Timestamp reference: 00:00:03.720 – 00:00:14.240
 
-1. Open the SAVA application in your browser or development environment.
+1. Open the ZAVA application in your browser or development environment.
 2. Confirm you see the overall e-commerce UI (product listings, search bar, cart icon).
 3. Note that this environment may be a migration/staging build — some behaviors may be incomplete.
 
-Tip: If you don’t see product listings, verify that the deployment and service integrations for SAVA are up and running.
+Tip: If you don’t see product listings, verify that the deployment and service integrations for ZAVA are up and running.
 
 ---
 
 ### 2. Adding products to the cart (example)
+
 Timestamp reference: 00:00:14.240 – 00:00:30.954
 
 Goal: Add two products to the cart and verify the cart count reads 2.
 
 UI elements involved:
+
 - Product listing (catalog/list view)
 - Add to cart button on product cards
 - Cart icon / cart view / cart count indicator
 
 Steps:
+
 1. Locate the product listing or product card for the first item (example: “paint wall”).
 2. Click the product card to open the product details if needed, or click the visible **Add to cart** button on the product listing.
 3. Repeat for a second product (example: “good stain”) by selecting it and clicking **Add to cart**.
@@ -56,16 +61,19 @@ Warning: On current migration builds the checkout behavior may be incomplete —
 ---
 
 ### 3. Searching for products and validating missing Add-to-Cart option
+
 Timestamp reference: 00:00:30.954 – 00:00:38.440
 
 Goal: Search for a product and confirm whether the search results include the Add to cart action. If missing, create a validation task for the engineering team.
 
 UI elements involved:
+
 - Search input / search box
 - Search results list
 - (Expected) Add to cart control in search results
 
 Steps:
+
 1. Enter the product name (or partial name) into the search input and submit the search.
 2. Inspect each search-result item in the results list.
 3. Confirm whether an **Add to cart** option is present directly in search results.
@@ -74,33 +82,37 @@ Steps:
 
 If the Add to cart control is missing:
 4. Create/assign a validation/task for the team with the following information:
-   - Title: “Add to cart missing from search results”
-   - Environment: (staging/branch/deployment name)
-   - Steps to reproduce:
-     1. Navigate to SAVA product search.
+
+- Title: “Add to cart missing from search results”
+- Environment: (staging/branch/deployment name)
+- Steps to reproduce:
+     1. Navigate to ZAVA product search.
      2. Search for “[product name]”.
      3. Observe search results; note the absence of an Add to cart button.
-   - Expected result: Add to cart button visible in search results for applicable product types.
-   - Actual result: Add to cart button not present.
-   - Attachments: screenshot(s) of search results, browser console logs (if available), timestamp (00:00:30.954).
-   - Priority and assignee: set according to team workflow.
+- Expected result: Add to cart button visible in search results for applicable product types.
+- Actual result: Add to cart button not present.
+- Attachments: screenshot(s) of search results, browser console logs (if available), timestamp (00:00:30.954).
+- Priority and assignee: set according to team workflow.
 
 Tip: Include product IDs or SKUs whenever possible to help developers reproduce the issue deterministically.
 
 ---
 
 ### 4. Cart checkout behavior and outstanding implementation work
+
 Timestamp reference: 00:00:38.440 – 00:00:55.480
 
 Goal: Proceed to checkout and document the cart-clearing behavior (or lack thereof) and other UI/localization considerations.
 
 UI elements involved:
+
 - Cart view
 - Proceed to checkout button
 - Cart-clearing behavior (expected feature)
 - Locale / localization settings or local feel elements
 
 Steps:
+
 1. From the cart view (after adding items), click **Proceed to checkout**.
 2. Observe the behavior after completing checkout (or after navigating to the checkout page).
    - Observed (in video): The behavior that should clear the cart after checkout is not implemented.
@@ -120,11 +132,12 @@ Steps:
 
 Tip: When creating implementation tickets, include whether the expected cart-clearing should occur immediately on successful order confirmation or upon explicit action. Also include any session/persistence details observed.
 
-Warning: Do not rely on the cart being auto-cleared in current SAVA staging builds—retain manual tracking of test items to avoid accidental test purchases or confusion during QA.
+Warning: Do not rely on the cart being auto-cleared in current ZAVA staging builds—retain manual tracking of test items to avoid accidental test purchases or confusion during QA.
 
 ---
 
 ## Validation task template (copy/paste)
+
 Use this short template when filing tickets or validation tasks:
 
 - Title: [short descriptive title]
@@ -142,6 +155,7 @@ Use this short template when filing tickets or validation tasks:
 ---
 
 ## Quick reference — UI elements
+
 - Product listing / product cards — where items are shown and Add to cart often appears  
 - Add to cart button — may appear on product card, product page, or search result (expected)  
 - Cart icon / cart view — view current items and counts  
