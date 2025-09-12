@@ -13,7 +13,7 @@ Prior to delivering the workshop please:
 | Resources | Links | Description |
 |---|---|---|
 | Session Delivery Deck | [Deck](https://aka.ms/AAxqj50) | The session delivery slides |
-| Session TTT Video | [BRK447-TTT-Full-Session.mp4](https://aka.ms/AAxrxeh) |
+| Full Session Recording | [Recording](https://youtu.be/F984bvbsOpc) |
 | Demo source code | [demo source code](../src/) | Demo Source Code |
 | Demo source code BackUp | [demo source code backup](../srcBackUp/) | Source Code completed for each one of the demo steps |
 
