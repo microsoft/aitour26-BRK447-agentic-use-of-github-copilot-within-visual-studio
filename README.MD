@@ -30,7 +30,7 @@ Check the [Session Delivery Resources folder](./session-delivery-resources/) for
 |---|---:|
 | Presenter Guide (full) | [session-delivery-resources/readme.md](session-delivery-resources/readme.md)
 | Slides | [EN-US_BRK447_Tech_FY26.pptx](https://aka.ms/AAxqj50) |
-| TTT Video | [BRK447-TTT-Full-Session.mp4](https://aka.ms/AAxrxeh) |
+| Full Session Recording | [Recording](https://youtu.be/F984bvbsOpc) |
 
 ## Content Owners
 
