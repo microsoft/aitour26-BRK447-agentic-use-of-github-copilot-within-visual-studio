@@ -1,7 +1,7 @@
 # BRK447: Agentic use of GitHub Copilot within Visual Studio
 
-[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/Pwpvf3TWaw)](https://discord.gg/Pwpvf3TWaw)
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=adff2f&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/Pwpvf3TWaw)](https://aka.ms/AIFoundryDiscord-AITour26)
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=adff2f&logoColor=fff)](https://aka.ms/AIFoundryForum-AITour26)
 
 This folder contains source and quick-reference material for the BRK-447 session: "Real-World AI Development with Visual Studio and GitHub Copilot." The content here is intended to be used during demos, labs, and for session handouts.
 
